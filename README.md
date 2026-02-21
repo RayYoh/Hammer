@@ -32,9 +32,7 @@ conda create -n hammer python==3.12
 conda activate hammer
 
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
-pip install wandb tensorboard
-pip install peft deepspeed
-pip install scikit-learn
+pip install wandb tensorboard peft deepspeed scikit-learn
 pip install transformer==4.54.1
 ```
 
@@ -49,8 +47,6 @@ Coming soon.
 This repository is released under the [MIT license](LICENSE).
 
 ## :clap: Acknowledgement
-The research work was conducted in the JC STEM Lab of Machine Learning and Computer Vision funded by The Hong Kong Jockey Club Charities Trust.
-
 Our code is primarily built upon [GLOVER](https://teleema.github.io/projects/GLOVER/), [VLMSAM](https://github.com/QuentinFitteRey/VLMSAM) and [GREAT](https://github.com/yawen-shao/GREAT_code).
 
 ## :pencil: Citation
