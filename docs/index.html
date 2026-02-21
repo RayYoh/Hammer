@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding">
+  <meta name="keywords" content="HAMMER, 3D Affordance Grounding, MLLMs, 3D Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAMMER - Lei Yao</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.png"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+  <link rel="stylesheet" href="static/css/style.css"> <!-- Resource style -->
+  <script src="static/js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://rayyoh.github.io/">
+        <span class="icon"> <i class="fas fa-home"></i> </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link"> More Research </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://rayyoh.github.io/SGIFormer"> SGIFormer </a>
+          <a class="navbar-item" href="https://github.com/RayYoh/LaSSM"> LaSSM </a>
+          <a class="navbar-item" href="https://rayyoh.github.io/GaussianCross"> GaussianCross </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+            <span style="color:rgba(74, 77, 163, 0.797); font-weight: bold; font-size: 1.2em;">HAMMER</span><br>
+            Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
+          </h1>
+          <h3 class="title is-4" style="color: #5c5c5c;">CVPR 2026</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rayyoh.github.io/">Lei Yao</a>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Yong_Chen22">Yong Chen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~YUEJIAO_SU1">Yuejiao Su</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://wangyintu.github.io/">Yi Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://lmomoy.github.io/">Moyun Liu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.eie.polyu.edu.hk/~lpchau/">Lap-Pui Chau</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">The Hong Kong Polytechnic University</span>
+            <!-- <br>
+            <span class="author-block">&#8224;<i>Corresponding author</i></span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon"> <i class="fas fa-file-pdf"></i> </span>
+                  <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/RayYoh/Hammer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"> <i class="fab fa-github"></i> </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Weights Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/RayYoh/Hammer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"> <img src="static/images/hf_icon.svg"/> </span>
+                  <span>Weights</span>
+                  </a>
+                </span>
+                <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2602.xxxxx" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"> <i class="ai ai-arxiv"></i> </span>
+                <span>arXiv</span>
+                </a>
+              </span>
+            
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TLDR Section -->
+<section class="hero" id="tldr">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width" style="padding: 25px;">
+                <div class="tldr-box"  
+                     style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 5px solid #4a90e2; 
+                                    padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <h4 class="title is-4" style="margin-bottom: 10px;">TL;DR:</h4>
+                    <p class="is-size-6">We present HAMMER, a novel approach that harnesses Multi-modal Large Language Models (MLLMs) to ground 3D affordances through cross-modal integration for intention-driven object interaction understanding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <div class="box" style="margin-top: 0; margin-bottom: 1rem;">
+                <img src="./static/images/teaser.png" alt="Teaser Image" class="teaser-image">
+            </div>
+            <p><strong>Overview of HAMMER approach.</strong> HAMMER integrates multi-modal inputs (images, text descriptions, 3D geometry) with MLLMs to predict 3D affordances and enable intention-driven object interaction understanding.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+         <!-- Abstract. -->
+         <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h3 class="title is-4"><b>Abstract</b></h3>
+                <div class="content has-text-justified">
+                    <p>Understanding 3D object affordances grounded by user intentions is a fundamental prerequisite for embodied agents to interact with 3D environments effectively. Existing approaches either focus on object-centric affordance discovery or generic 3D understanding, often overlooking the need to integrate human intentions with scene context. In this paper, we present <strong><i>HAMMER</i></strong>, a novel framework that harnesses Multi-modal Large Language Models (MLLMs) via cross-modal integration for intention-driven 3D affordance grounding. Our approach leverages the semantic understanding and reasoning capabilities of MLLMs by combining visual, textual, and geometric information within a unified framework. We demonstrate how cross-modal integration enables more effective grounding of affordances by bridging the gap between high-level human intentions and low-level 3D geometric features. Extensive experiments on benchmark datasets validate the effectiveness of our approach, showing significant improvements over existing methods in intention-aware affordance grounding and enabling more intuitive object interaction in 3D scenes.</p>
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+</section>
+
+<section class="section" id="Pipeline">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-2">Pipeline</h2>
+                <div class="box" style="margin-top: 0; margin-bottom: 1rem;">
+                    <img src="./static/images/pepeline.png" alt="Pipeline">
+                </div>
+                <div class="content has-text-justified">
+                    <p><b>The overall architecture of HAMMER.</b> Our framework integrates multi-modal inputs (images, text, 3D geometry) with MLLMs to predict intention-driven 3D affordances. The pipeline leverages cross-modal attention mechanisms to align vision and language representations with 3D geometric features for effective affordance grounding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h2 class="title is-2">Experiments</h2>
+    </div>
+</section>
+
+<section class="section" id="Experiments">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <div class="columns is-multiline">
+                    <div class="column is-half">
+                        <div class="box">
+                            <div class="content has-text-centered">
+                                <img src="./static/images/linear.png" alt="Linear Probing Results" width="100%"/>
+                                <p><b style="color:rgba(74, 77, 163, 0.797)">Parameter efficiency and linear probing results.</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="box">
+                            <div class="content has-text-centered">
+                                <img src="./static/images/robustness.png" alt="Robustness Results" width="100%"/>
+                                <p><b style="color:rgba(74, 77, 163, 0.797)">Robustness evaluation across different datasets.</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h2 class="title is-2">Visualization</h2>
+    </div>
+</section>
+
+<section class="section" id="Visualization">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <div class="box">
+                    <div class="content has-text-centered">
+                        <img src="./static/images/vis_geal.png" alt="GEAL Dataset Visualization" width="100%"/>
+                        <p><b style="color:rgba(74, 77, 163, 0.797)">Qualitative results on GEAL dataset.</b></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content has-text-centered">
+                        <img src="./static/images/vis_piad.png" alt="PIAD Dataset Visualization" width="100%"/>
+                        <p><b style="color:rgba(74, 77, 163, 0.797)">Affordance grounding predictions on PIAD dataset.</b></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content has-text-centered">
+                        <img src="./static/images/vis_piadv2_seen.png" alt="PIAD v2 Seen Visualization" width="100%"/>
+                        <p><b style="color:rgba(74, 77, 163, 0.797)">Results on PIAD v2 seen classes.</b></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content has-text-centered">
+                        <img src="./static/images/vis_piadv2_unseen.png" alt="PIAD v2 Unseen Visualization" width="100%"/>
+                        <p><b style="color:rgba(74, 77, 163, 0.797)">Zero-shot generalization on PIAD v2 unseen classes.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section class="section" id="Acknowledgment">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgment 👏</h2>
+      <p>This research was supported by The Hong Kong Polytechnic University. We would like to thank the open-source community for their contributions to foundational models and 3D vision research that enabled this work.</p>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX 📝</h2>
+        <pre><code>@inproceedings{yao2026hammer, 
+  title={HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding}, 
+  author={Yao, Lei and Chen, Yong and Su, Yuejiao and Wang, Yi and Liu, Moyun and Chau, Lap-Pui}, 
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 
+  year={2026}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-8">
+        <div class="content">
+          <a style="color:hsla(247, 58%, 62%, 0.862)" href="#top"><i class="fa fa-arrow-up"></i><br/>Top</a>
+          <p>
+            Website from <a style="color:hsla(247, 58%, 62%, 0.862)" href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under <a style="color:hsla(247, 61%, 57%, 0.862)"
+            href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+            International</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
