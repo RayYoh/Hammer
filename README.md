@@ -13,7 +13,7 @@ CVPR 2026
 </div>
 
 ## :memo: To-Do List
-- [ ] Environment installation instructions.
+- [x] Environment installation instructions.
 - [ ] Instructions for processing dataset.
 - [ ] Release trained weights and experiment record.
 - [ ] Release training code.
