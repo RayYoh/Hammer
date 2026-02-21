@@ -1,0 +1,65 @@
+<div align="center">
+
+# HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
+CVPR 2026
+
+[Lei Yao](https://rayyoh.github.io/), [Yong Chen](), [Yuejiao Su](), [Yi Wang](https://wangyintu.github.io/), [Moyun Liu](https://lmomoy.github.io/), [Lap-Pui Chau](https://www.eie.polyu.edu.hk/~lpchau/)
+
+<a href="https://arxiv.org/abs/2602.xxxxx"><img src='https://img.shields.io/badge/arXiv-2602.xxxxx-b31b1b.svg'></a>
+<a href="https://rayyoh.github.io/GaussianCross/"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+<a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/-Python_3.8-blue?logo=python&logoColor=white">
+<a href="https://huggingface.co/RayYoh/GaussianCross"><img src="https://img.shields.io/badge/Weights-grey?style=plastic&logo=huggingface&logoColor=yellow">
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray">
+</div>
+
+## :memo: To-Do List
+- [ ] Environment installation instructions.
+- [ ] Instructions for processing dataset.
+- [ ] Release trained weights and experiment record.
+- [ ] Release training code.
+
+## 🌟 Pipeline
+![image](./assets/overview.png)
+
+
+## :hammer: Installation
+```bash
+pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointnet2_ops&subdirectory=pointnet2_ops_lib"
+pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
+
+# For CUDA 12.8
+conda create -n hammer python==3.12
+conda activate hammer
+
+pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+pip install wandb tensorboard
+pip install peft deepspeed
+pip install scikit-learn
+pip install transformer==4.54.1
+```
+
+## :mag: Data Preprocessing 
+Coming soon.
+
+## 🚀 Training
+Coming soon.
+
+## :books: License
+
+This repository is released under the [MIT license](LICENSE).
+
+## :clap: Acknowledgement
+The research work was conducted in the JC STEM Lab of Machine Learning and Computer Vision funded by The Hong Kong Jockey Club Charities Trust.
+
+Our code is primarily built upon [GLOVER](https://teleema.github.io/projects/GLOVER/), [VLMSAM](https://github.com/QuentinFitteRey/VLMSAM) and [GREAT](https://github.com/yawen-shao/GREAT_code).
+
+## :pencil: Citation
+
+```bib
+@article{yao2026hammer,
+  title={HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding},
+  author={Yao, Lei and Chen, Yong and Su, Yuejiao, Wang, Yi and Liu, Moyun and Chau, Lap-Pui},
+  journal={arXiv preprint arXiv:2602.xxxxx},
+  year={2025}
+}
+```

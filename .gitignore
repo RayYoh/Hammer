@@ -1,0 +1,22 @@
+image/
+__pycache__
+**/build/
+**/*.egg-info/
+**/dist/
+*.so
+exp
+weights
+log
+outputs/
+.vscode
+.idea
+*/.DS_Store
+# **/*.out
+Dockerfile
+tmp
+*.pdf
+Data
+GEAL/
+PIADv1/
+PIADv2/
+vis/
