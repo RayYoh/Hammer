@@ -143,3 +143,34 @@
     -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
     transition: transform 0.3s 0.7s, opacity 0s 0.7s;
   }
+
+/* Hammer Custom Styles */
+.box img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+.box img:hover {
+    transform: scale(1.1);
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.external-link {
+    transition: all 0.3s ease;
+}
+.external-link:hover {
+    transform: scale(1.1);
+    background-color: #363636 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.link-block {
+    margin: 5px;
+}
+.publication-links {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: inline-block;
+    border: 1px solid #f0f0f0;
+}

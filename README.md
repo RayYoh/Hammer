@@ -3,7 +3,7 @@
 # :hammer: HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
 CVPR 2026
 
-[Lei Yao](https://rayyoh.github.io/), [Yong Chen](), [Yuejiao Su](), [Yi Wang](https://wangyintu.github.io/), [Moyun Liu](https://lmomoy.github.io/), [Lap-Pui Chau](https://www.eie.polyu.edu.hk/~lpchau/)
+[Lei Yao](https://rayyoh.github.io/), [Yong Chen](https://openreview.net/profile?id=~Yong_Chen22), [Yuejiao Su](https://openreview.net/profile?id=~YUEJIAO_SU1), [Yi Wang](https://wangyintu.github.io/), [Moyun Liu](https://lmomoy.github.io/), [Lap-Pui Chau](https://www.eie.polyu.edu.hk/~lpchau/)
 
 <a href="https://arxiv.org/abs/2602.xxxxx"><img src='https://img.shields.io/badge/arXiv-2602.xxxxx-b31b1b.svg'></a>
 <a href="https://rayyoh.github.io/GaussianCross/"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
@@ -57,6 +57,8 @@ Coming soon.
 This repository is released under the [MIT license](LICENSE).
 
 ## :clap: Acknowledgement
+The research work described in this paper was conducted in the JC STEM Lab of Machine Learning and Computer Vision funded by The Hong Kong Jockey Club Charities Trust. This research received partially support from the Global STEM Professorship Scheme from the Hong Kong Special Administrative Region.
+
 Our code is primarily built upon [GLOVER](https://teleema.github.io/projects/GLOVER/), [VLMSAM](https://github.com/QuentinFitteRey/VLMSAM) and [GREAT](https://github.com/yawen-shao/GREAT_code).
 
 ## :pencil: Citation
@@ -64,8 +66,8 @@ Our code is primarily built upon [GLOVER](https://teleema.github.io/projects/GLO
 ```bib
 @article{yao2026hammer,
   title={HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding},
-  author={Yao, Lei and Chen, Yong and Su, Yuejiao, Wang, Yi and Liu, Moyun and Chau, Lap-Pui},
+  author={Yao, Lei and Chen, Yong and Su, Yuejiao and Wang, Yi and Liu, Moyun and Chau, Lap-Pui},
   journal={arXiv preprint arXiv:2602.xxxxx},
-  year={2025}
+  year={2026}
 }
 ```
