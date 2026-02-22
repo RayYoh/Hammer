@@ -174,3 +174,5 @@ outputs/
 Dockerfile
 tmp
 *.pdf
+ckpt/
+ckpt
