@@ -49,9 +49,15 @@ pip install transformer==4.54.1
 Coming soon.
 
 ## :rocket: Training
-Coming soon.
+```bash
+# -d for datasets, -p for splits, -g for GPU nums, 
+# -l for learning rate, -e for epoches, -n for name
+# for more details, see scripts/train.sh
+bash scripts/train.sh -d PIADv1 -p Seen -g 4 -b 64 -l 0.0001 -e 30 -n exp1
+```
 
 ## :flying_saucer: Inference
+Coming soon.
 
 ## :books: License
 This repository is released under the [MIT license](LICENSE).
