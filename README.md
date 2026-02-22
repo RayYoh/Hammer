@@ -1,21 +1,21 @@
 <div align="center">
 
 # :hammer: HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
-CVPR 2026
+**CVPR 2026**
 
 [Lei Yao](https://rayyoh.github.io/), [Yong Chen](https://openreview.net/profile?id=~Yong_Chen22), [Yuejiao Su](https://openreview.net/profile?id=~YUEJIAO_SU1), [Yi Wang](https://wangyintu.github.io/), [Moyun Liu](https://lmomoy.github.io/), [Lap-Pui Chau](https://www.eie.polyu.edu.hk/~lpchau/)
 
 <a href="https://arxiv.org/abs/2602.xxxxx"><img src='https://img.shields.io/badge/arXiv-2602.xxxxx-b31b1b.svg'></a>
-<a href="https://rayyoh.github.io/GaussianCross/"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+<a href="https://rayyoh.github.io/Hammer/"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/-Python_3.10-blue?logo=python&logoColor=white">
-<a href="https://huggingface.co/RayYoh/GaussianCross"><img src="https://img.shields.io/badge/Weights-grey?style=plastic&logo=huggingface&logoColor=yellow">
+<a href="https://huggingface.co/RayYoh/Hammer"><img src="https://img.shields.io/badge/Weights-grey?style=plastic&logo=huggingface&logoColor=yellow">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray">
 </div>
 
 ## :memo: To-Do List
 - [x] Environment installation instructions.
 - [ ] Instructions for processing dataset.
-- [ ] Release trained weights and experiment record.
+- [x] Release trained weights.
 - [ ] Release training code.
 
 ## 🌟 Pipeline
