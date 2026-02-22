@@ -91,7 +91,7 @@ def parse_args(args):
     parser.add_argument("--beta1", default=0.9, type=float)
     parser.add_argument("--beta2", default=0.95, type=float)
     parser.add_argument("--vlm_out_dim", default=256, type=int)
-    parser.add_argument("--dataset", default="PIADv2", type=str, choices=["PIADv1", "PIADv2", "HYBRID"])
+    parser.add_argument("--dataset", default="PIADv2", type=str, choices=["PIADv1", "PIADv2"])
     parser.add_argument("--question_type", default="simple", type=str)
     parser.add_argument("--setting", default="Seen", type=str, choices=["Seen", "Unseen", "Unseen_afford", "Unseen_obj"])
     parser.add_argument("--resume", default="", type=str, help="Path to checkpoint to resume from")

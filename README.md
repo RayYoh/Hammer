@@ -17,6 +17,7 @@
 - [ ] Instructions for processing dataset.
 - [x] Release trained weights.
 - [x] Release training code.
+- [x] Release evaluation code.
 
 ## 🌟 Pipeline
 ![image](./assets/overview.png)
@@ -57,7 +58,9 @@ bash scripts/train.sh -d PIADv1 -p Seen -g 4 -b 64 -l 0.0001 -e 30 -n exp1
 ```
 
 ## :flying_saucer: Inference
-Coming soon.
+```bash
+bash scripts/eval.sh
+```
 
 ## :books: License
 This repository is released under the [MIT license](LICENSE).
