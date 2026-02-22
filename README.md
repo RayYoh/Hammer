@@ -16,7 +16,7 @@
 - [x] Environment installation instructions.
 - [ ] Instructions for processing dataset.
 - [x] Release trained weights.
-- [ ] Release training code.
+- [x] Release training code.
 
 ## 🌟 Pipeline
 ![image](./assets/overview.png)
