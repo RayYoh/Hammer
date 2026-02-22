@@ -1,6 +1,6 @@
 <div align="center">
 
-# :hammer: HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
+# <img src="assets/hammer.png" alt="HAMMER" width="32" /> HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
 **CVPR 2026**
 
 [Lei Yao](https://rayyoh.github.io/), [Yong Chen](https://openreview.net/profile?id=~Yong_Chen22), [Yuejiao Su](https://openreview.net/profile?id=~YUEJIAO_SU1), [Yi Wang](https://wangyintu.github.io/), [Moyun Liu](https://lmomoy.github.io/), [Lap-Pui Chau](https://www.eie.polyu.edu.hk/~lpchau/)
@@ -36,6 +36,7 @@ pip install -r requirements.txt
 # Alternative method to install pointnet2_ops and KNN_CUDA
 pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointnet2_ops&subdirectory=pointnet2_ops_lib"
 pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
+
 
 # For CUDA 12.8
 conda create -n hammer python==3.12
