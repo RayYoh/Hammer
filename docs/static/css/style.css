@@ -147,7 +147,6 @@
 /* Hammer Custom Styles */
 .box img {
     transition: transform 0.3s ease;
-    cursor: zoom-in;
 }
 .box img:hover {
     transform: scale(1.1);
