@@ -5,7 +5,7 @@
 
 [Lei Yao](https://rayyoh.github.io/), [Yong Chen](https://openreview.net/profile?id=~Yong_Chen22), [Yuejiao Su](https://openreview.net/profile?id=~YUEJIAO_SU1), [Yi Wang](https://wangyintu.github.io/), [Moyun Liu](https://lmomoy.github.io/), [Lap-Pui Chau](https://www.eie.polyu.edu.hk/~lpchau/)
 
-<a href="https://arxiv.org/abs/2602.xxxxx"><img src='https://img.shields.io/badge/arXiv-2602.xxxxx-b31b1b.svg'></a>
+<a href="https://arxiv.org/abs/2603.02329"><img src='https://img.shields.io/badge/arXiv-2603.02329-b31b1b.svg'></a>
 <a href="https://rayyoh.github.io/Hammer/"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/-Python_3.10-blue?logo=python&logoColor=white">
 <a href="https://huggingface.co/RayYoh/Hammer"><img src="https://img.shields.io/badge/Weights-grey?style=plastic&logo=huggingface&logoColor=yellow">
@@ -74,10 +74,10 @@ Our code is primarily built upon [GLOVER](https://teleema.github.io/projects/GLO
 ## :pencil: Citation
 
 ```bib
-@article{yao2026hammer,
+@inproceedings{yao2026hammer,
   title={HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding},
   author={Yao, Lei and Chen, Yong and Su, Yuejiao and Wang, Yi and Liu, Moyun and Chau, Lap-Pui},
-  journal={arXiv preprint arXiv:2602.xxxxx},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2026}
 }
 ```
