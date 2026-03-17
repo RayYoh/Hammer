@@ -10,11 +10,13 @@
 <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/-Python_3.10-blue?logo=python&logoColor=white">
 <a href="https://huggingface.co/RayYoh/Hammer"><img src="https://img.shields.io/badge/Weights-grey?style=plastic&logo=huggingface&logoColor=yellow">
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray">
+
+Feel free to contact us if you have any questions regarding the code. You can reach us via email or open an issue.
 </div>
 
 ## :memo: To-Do List
 - [x] Environment installation instructions.
-- [ ] Instructions for processing dataset.
+- [x] Instructions for processing dataset.
 - [x] Release trained weights.
 - [x] Release training code.
 - [x] Release evaluation code.
@@ -38,6 +40,7 @@ pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointn
 pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
 
 
+#--------------------------------------#
 # For CUDA 12.8
 conda create -n hammer python==3.12
 conda activate hammer
@@ -48,7 +51,33 @@ pip install transformer==4.54.1
 ```
 
 ## :mag: Data Preprocessing 
-Coming soon.
+We provide the preprocessed data for PIADv1, PIADv2 and PIADv1-C datasets. Please download the preprocessed data from [hammer](https://huggingface.co/datasets/RayYoh/hammer) and place them in the `data` folder.
+
+The dataset structure should be as follows:
+```data/
+├── PIADv1/
+│   ├── Seen/
+│   │   ├── Img/
+│   │   ├── Point/
+│   │   ├── Img_train.txt
+│   │   ├── Img_test.txt
+│   │   ├── Point_Extracted_train.txt
+│   │   ├── Point_test.txt
+│   ├── Unseen/
+├── PIADv2/
+│   ├── Seen/
+│   │   ├── Img/
+│   │   ├── Point/
+│   │   ├── Img_train.txt
+│   │   ├── Img_test.txt
+│   │   ├── Img_val.txt
+│   │   ├── Point_train.txt
+│   │   ├── Point_test.txt
+│   │   ├── Point_val.txt
+```
+We also provide the preprocess code for PIADv1 train split in `tools/preprocess_piadv1.py`. We use a different dataset logic for PIADv2 compared to [GREAT](https://github.com/yawen-shao/GREAT_code/blob/main/data_utils/dataset_PIAD_GREAT.py), you can refer to `src/utils/afford_dataset.py` for the difference.
+
+
 
 ## :rocket: Training
 ```bash
