@@ -8,11 +8,15 @@
 <a href="https://arxiv.org/abs/2603.02329"><img src='https://img.shields.io/badge/arXiv-2603.02329-b31b1b.svg'></a>
 <a href="https://rayyoh.github.io/Hammer/"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/-Python_3.10-blue?logo=python&logoColor=white">
-<a href="https://huggingface.co/RayYoh/Hammer"><img src="https://img.shields.io/badge/Weights-grey?style=plastic&logo=huggingface&logoColor=yellow">
+<a href="https://huggingface.co/RayYoh/Hammer"><img src="https://img.shields.io/badge/HAMMER-Weights-yellow?logo=huggingface"></a>
+<a href="https://huggingface.co/datasets/RayYoh/hammer"><img src="https://img.shields.io/badge/PIADv1--C-Dataset-yellow?logo=huggingface"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray">
 
 Feel free to contact us if you have any questions regarding the code. You can reach us via email or open an issue.
+
 </div>
+
+> **TL;DR.** HAMMER is the first framework to ground 3D affordances directly via MLLMs — no 2D segmenters, no attribute descriptions. It improves aIoU by **+1.69** on the PIAD Seen split and **+5.39** on the Unseen split over the previous best. We additionally release **PIADv1-C**, a new corruption-style benchmark for evaluating robustness in 3D affordance grounding.
 
 ## :memo: To-Do List
 - [x] Environment installation instructions.

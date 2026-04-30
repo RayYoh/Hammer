@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding">
   <meta name="keywords" content="HAMMER, 3D Affordance Grounding, MLLMs, 3D Understanding">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HAMMER - Lei Yao</title>
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://rayyoh.github.io/Hammer/">
+  <meta property="og:title" content="HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding">
+  <meta property="og:description" content="CVPR 2026. HAMMER leverages MLLMs and cross-modal integration for intention-driven 3D affordance grounding.">
+  <meta property="og:image" content="https://rayyoh.github.io/Hammer/static/images/overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding">
+  <meta name="twitter:description" content="CVPR 2026. HAMMER leverages MLLMs and cross-modal integration for intention-driven 3D affordance grounding.">
+  <meta name="twitter:image" content="https://rayyoh.github.io/Hammer/static/images/overview.png">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -21,36 +32,29 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/hammer.png">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  
+
   <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-
-  <link rel="stylesheet" href="static/css/style.css"> <!-- Resource style -->
-  <script src="static/js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 
-<body>
+<body id="top">
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
+  <div id="navMenu" class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://rayyoh.github.io/">
         <span class="icon"> <i class="fas fa-home"></i> </span>
@@ -65,7 +69,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </nav>
 
@@ -76,29 +79,18 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">
-            <img src="static/images/hammer.png" alt="HAMMER" style="width: 48px; height: auto; vertical-align: text-top; margin-right: 10px; transform: translateY(-2px);" />
-            <span style="color:rgba(74, 77, 163, 0.797); font-weight: bold; font-size: 1.2em;">HAMMER</span><br>
+            <img src="static/images/hammer.png" alt="HAMMER logo" style="width: 48px; height: auto; vertical-align: text-top; margin-right: 10px; transform: translateY(-2px);" />
+            <span style="color:var(--hammer-accent-soft); font-weight: bold; font-size: 1.2em;">HAMMER</span><br>
             Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding
           </h1>
-          <h3 class="title is-4" style="color: #5c5c5c;">CVPR 2026</h3>
+          <h3 class="title is-4" style="color: #5c5c5c; margin-bottom: 1.25rem;">CVPR 2026</h3>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://rayyoh.github.io/">Lei Yao</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://openreview.net/profile?id=~Yong_Chen22">Yong Chen</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://openreview.net/profile?id=~YUEJIAO_SU1">Yuejiao Su</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://wangyintu.github.io/">Yi Wang</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://lmomoy.github.io/">Moyun Liu</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.eie.polyu.edu.hk/~lpchau/">Lap-Pui Chau</a><sup>1</sup>
-            </span>
+            <span class="author-block"><a href="https://rayyoh.github.io/">Lei Yao</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://openreview.net/profile?id=~Yong_Chen22">Yong Chen</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://openreview.net/profile?id=~YUEJIAO_SU1">Yuejiao Su</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://wangyintu.github.io/">Yi Wang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://lmomoy.github.io/">Moyun Liu</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.eie.polyu.edu.hk/~lpchau/">Lap-Pui Chau</a><sup>1</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -136,8 +128,8 @@
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/RayYoh/Hammer"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"> 
-                    <img src="static/images/hf_icon.svg" style="width: 1.1em; height: 1.1em; max-width: none; vertical-align: middle;"/>
+                  <span class="icon">
+                    <img src="static/images/hf_icon.svg" alt="" style="width: 1.1em; height: 1.1em; max-width: none; vertical-align: middle;"/>
                   </span>
                   <span>Weights</span>
                 </a>
@@ -163,8 +155,8 @@
     <div class="container is-max-desktop">
         <div class="columns is-centered">
             <div class="column is-full-width" style="padding: 25px;">
-                <div class="tldr-box"  
-                     style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 5px solid #4a90e2; 
+                <div class="tldr-box"
+                     style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 5px solid #4a90e2;
                                     padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                     <h4 class="title is-4" style="margin-bottom: 10px;">TL;DR:</h4>
                     <p class="is-size-5">We present HAMMER, a novel approach that harnesses Multi-modal Large Language Models (MLLMs) to ground 3D affordances through cross-modal integration for intention-driven object interaction understanding.</p>
@@ -175,14 +167,40 @@
 </section>
 
 <!-- Paper abstract -->
-<section class="section hero" style="padding-top: 1rem; padding-bottom: 1rem;">
+<section class="section hero">
     <div class="container is-max-desktop">
          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
+            <div class="column is-full-width">
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p class="is-size-5">
-                      Humans commonly identify 3D object affordance through observed interactions in images or videos, and once formed, such knowledge can be generically generalized to novel objects. Inspired by this principle, we advocate for a novel framework that leverages emerging multimodal large language models (MLLMs) for interaction intention-driven 3D affordance grounding, namely <strong>HAMMER</strong>. Instead of generating explicit object attribute descriptions or relying on off-the-shelf 2D segmenters, we alternatively aggregate the interaction intention depicted in the image into a contact-aware embedding and guide the model to infer textual affordance labels, ensuring it thoroughly excavates object semantics and contextual cues. We further devise a hierarchical cross-modal integration mechanism to fully exploit the complementary information from the MLLM for 3D representation refinement and introduce a multi-granular geometry lifting module that infuses spatial characteristics into the extracted intention embedding, thus facilitating accurate 3D affordance localization. Extensive experiments on public datasets and our newly constructed corrupted benchmark demonstrate the superiority and robustness of <strong>HAMMER</strong> compared to existing approaches.
+                      Humans commonly identify 3D object affordance through observed interactions in images or videos, and once formed, such knowledge can be generically generalized to novel objects. Inspired by this principle, we advocate for a novel framework that leverages emerging multimodal large language models (MLLMs) for interaction intention-driven 3D affordance grounding, namely <strong>HAMMER</strong>. Instead of generating explicit object attribute descriptions or relying on off-the-shelf 2D segmenters, we alternatively aggregate the interaction intention depicted in the image into a <strong>contact-aware embedding</strong> and guide the model to infer textual affordance labels, ensuring it thoroughly excavates object semantics and contextual cues. We further devise a <strong>hierarchical cross-modal integration</strong> mechanism to fully exploit the complementary information from the MLLM for 3D representation refinement and introduce a <strong>multi-granular geometry lifting</strong> module that infuses spatial characteristics into the extracted intention embedding, thus facilitating accurate 3D affordance localization. Extensive experiments on public datasets and our newly constructed <strong>PIADv1-C benchmark</strong> demonstrate the superiority and robustness of <strong>HAMMER</strong> compared to existing approaches.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Contributions -->
+<section class="section" id="contributions" style="padding-top: 0;">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+                <div class="contrib-box">
+                <ul class="contrib-list">
+                    <li><strong>Intention-aware MLLM grounding.</strong> We aggregate interaction intention from images into a contact-aware embedding that guides the MLLM to infer textual affordance labels — bypassing explicit attribute descriptions and off-the-shelf 2D segmenters.</li>
+                    <li><strong>Hierarchical cross-modal integration.</strong> A dedicated mechanism that fuses complementary MLLM features into 3D point representations for refined affordance grounding.</li>
+                    <li><strong>Multi-granular geometry lifting.</strong> A module that infuses multi-scale spatial cues into the intention embedding, yielding 3D-aware features for accurate localization.</li>
+                    <li><strong>PIADv1-C benchmark.</strong> A newly constructed corruption-style benchmark for 3D affordance grounding, on which HAMMER demonstrates superior robustness over existing approaches.</li>
+                    <li><strong>State-of-the-art results.</strong> On PIAD, HAMMER improves aIoU by <strong>+1.69</strong> on the Seen split and <strong>+5.39</strong> on the Unseen split over the previous best, with consistent gains on PIAD v2 and the PIADv1-C benchmark.</li>
+                </ul>
+                </div>
+
+                <div class="content has-text-justified" style="margin-top: 2rem;">
+                    <p class="is-size-5">
+                        <strong>How HAMMER differs from prior work.</strong> Existing 3D affordance grounding methods either rely on <em>off-the-shelf 2D segmenters</em> (e.g., GREAT) or generate <em>explicit object attribute descriptions</em>. HAMMER instead extracts a single <strong>contact-aware intention embedding</strong> directly from an MLLM and lifts it into 3D — yielding stronger generalization to unseen objects (<strong>+5.39 aIoU on PIAD Unseen</strong>) and improved robustness on PIADv1-C.
                     </p>
                 </div>
             </div>
@@ -200,7 +218,7 @@
         <div class="columns is-centered has-text-centered">
             <div class="column is-full-width">
                 <div class="box" style="margin-top: 0; margin-bottom: 1rem;">
-                    <img src="./static/images/overview.png" alt="Pipeline">
+                    <img src="./static/images/overview.png" alt="HAMMER architecture: an interaction image and a 3D point cloud are fused through an MLLM-derived intention embedding, hierarchical cross-modal integration, and multi-granular geometry lifting to produce the final 3D affordance map.">
                 </div>
                 <div class="content has-text-justified">
                     <p><b>The overall architecture of HAMMER.</b> Given a 3D point cloud \(\mathbf{P}\) and its corresponding interaction image \(\mathbf{I}\), our framework first processes \(\mathbf{I}\) through a pre-trained MLLM \(\mathcal{F}_{\theta}\) to extract an affordance-guided intention embedding \(\mathbf{f}_c\). This embedding is then used to enhance point cloud features via a hierarchical cross-modal integration mechanism. To imbue \(\mathbf{f}_c\) with 3D spatial awareness, we apply a multi-granular geometry lifting module that incorporates multi-scale geometric cues. Finally, the refined point features \(\tilde{\mathbf{f}}_p\) and the 3D-aware intention embedding \(\mathbf{f}_c^{3D}\) are decoded to produce the final affordance map \(\mathbf{p}\).</p>
@@ -218,35 +236,52 @@
 
 <section class="section" id="Visualization">
     <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
+        <div class="columns is-centered">
             <div class="column is-full-width">
-                <div class="box">
-                    <h4 class="title is-4" style="color:rgba(74, 77, 163, 0.797)">Predictions on PIAD dataset.</h4>
-                    <div class="content has-text-centered">
-                        <img src="./static/images/vis_piad.png" alt="PIAD Dataset Visualization" width="100%"/>
+                <div class="tabs is-centered is-boxed vis-tabs">
+                    <ul>
+                        <li class="is-active" data-vis="piad"><a>PIAD</a></li>
+                        <li data-vis="piadv2-seen"><a>PIAD v2 (seen)</a></li>
+                        <li data-vis="piadv2-unseen"><a>PIAD v2 (unseen, zero-shot)</a></li>
+                        <li data-vis="feat"><a>Feature integration</a></li>
+                    </ul>
+                </div>
+
+                <div class="vis-panel is-active" id="vis-piad">
+                    <div class="box">
+                        <h3 class="title is-4 hammer-accent has-text-centered">Predictions on PIAD dataset</h3>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/vis_piad.png" alt="Side-by-side qualitative predictions on the PIAD dataset comparing HAMMER outputs against ground-truth affordance maps." width="100%" loading="lazy"/>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <h4 class="title is-4" style="color:rgba(74, 77, 163, 0.797)">Results on PIAD v2 seen classes</h4>
-                    <div class="content has-text-centered">
-                        <img src="./static/images/vis_piadv2_seen.png" alt="PIAD v2 Seen Visualization" width="100%"/>
+                <div class="vis-panel" id="vis-piadv2-seen">
+                    <div class="box">
+                        <h3 class="title is-4 hammer-accent has-text-centered">Results on PIAD v2 seen classes</h3>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/vis_piadv2_seen.png" alt="Qualitative predictions on PIAD v2 seen-class split." width="100%" loading="lazy"/>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <h4 class="title is-4" style="color:rgba(74, 77, 163, 0.797)">Zero-shot generalization on PIAD v2 unseen splits</h4>
-                    <div class="content has-text-centered">
-                        <img src="./static/images/vis_piadv2_unseen.png" alt="PIAD v2 Unseen Visualization" width="100%"/>
+                <div class="vis-panel" id="vis-piadv2-unseen">
+                    <div class="box">
+                        <h3 class="title is-4 hammer-accent has-text-centered">Zero-shot generalization on PIAD v2 unseen splits</h3>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/vis_piadv2_unseen.png" alt="Zero-shot affordance grounding on PIAD v2 unseen-class splits." width="100%" loading="lazy"/>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <h4 class="title is-4" style="color:rgba(74, 77, 163, 0.797)">Effectiveness of the feature integration</h4>
-                    <div class="content has-text-centered">
-                        <img src="./static/images/vis_feat.png" alt="Effectiveness" width="100%"/>
+                <div class="vis-panel" id="vis-feat">
+                    <div class="box">
+                        <h3 class="title is-4 hammer-accent has-text-centered">Effectiveness of the feature integration</h3>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/vis_feat.png" alt="Feature visualizations showing the effect of the cross-modal integration mechanism." width="100%" loading="lazy"/>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
 
 <section class="hero is-light is-small">
@@ -258,67 +293,106 @@
 <section class="section" id="Experiments">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
-            <div class="column is-full-width">                
+            <div class="column is-full-width">
                 <div class="box">
-                    <h3 class="title is-4">Quantitative results on PIAD dataset</h3>
+                    <h3 class="title is-4">Quantitative results on PIAD dataset <span class="hammer-accent" style="font-size: 0.85em;">(+1.69 aIoU on Seen, +5.39 aIoU on Unseen)</span></h3>
                     <div class="content has-text-centered">
-                        <img src="./static/images/tab_piad.png" alt="PIAD Results" width="100%"/>
+                        <img src="./static/images/tab_piad.png" alt="Quantitative comparison table on the PIAD dataset." width="100%" loading="lazy"/>
                     </div>
                 </div>
 
                 <div class="box">
                     <h3 class="title is-4">Quantitative results on PIAD v2 dataset</h3>
                     <div class="content has-text-centered">
-                        <img src="./static/images/tab_piadv2.png" alt="PIAD v2 Results" width="100%"/>
+                        <img src="./static/images/tab_piadv2.png" alt="Quantitative comparison table on the PIAD v2 dataset." width="100%" loading="lazy"/>
                     </div>
                 </div>
 
                 <div class="columns is-vcentered">
                     <div class="column" style="flex: 0 0 40%; display: flex; flex-direction: column; justify-content: space-between;">
                         <div class="box" style="margin-bottom: 1rem;">
-                            <h4 class="title is-6">Robustness evaluation</h4>
+                            <h3 class="title is-4">Robustness evaluation</h3>
                             <div class="content has-text-centered">
-                                <img src="./static/images/vis_robustness.png" alt="Robustness Evaluation" width="100%"/>
+                                <img src="./static/images/vis_robustness.png" alt="Qualitative robustness evaluation under input corruptions." width="100%" loading="lazy"/>
                             </div>
                         </div>
                         <div class="box" style="margin-bottom: 0;">
-                            <h4 class="title is-6">Quantitative results</h4>
+                            <h3 class="title is-4">Quantitative results</h3>
                             <div class="content has-text-centered">
-                                <img src="./static/images/tab_robust.png" alt="Robustness Comparison" width="100%"/>
+                                <img src="./static/images/tab_robust.png" alt="Quantitative robustness comparison table on the PIADv1-C benchmark." width="100%" loading="lazy"/>
                             </div>
                         </div>
                     </div>
                     <div class="column" style="flex: 0 0 60%;">
                         <div class="box" style="height: 100%; margin-bottom: 0;">
-                            <h3 class="title is-5">More qualitative results on the corrupted benchmark</h3>
+                            <h3 class="title is-4">More qualitative results on the PIADv1-C benchmark</h3>
                             <div class="content has-text-centered">
-                                <img src="./static/images/vis_geal.png" alt="Qualitative Corrupted" width="100%"/>
+                                <img src="./static/images/vis_geal.png" alt="Additional qualitative predictions on the PIADv1-C benchmark." width="100%" loading="lazy"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
 
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h2 class="title is-2">Resources &amp; Benchmark</h2>
+    </div>
+</section>
+<section class="section" id="Resources">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <div class="content">
+                    <p class="is-size-5">
+                        Alongside the model, we release <strong>PIADv1-C</strong> — a new corruption-style benchmark for evaluating the robustness of 3D affordance grounding methods. We invite the community to evaluate on PIADv1-C and report results in future work.
+                    </p>
+                    <ul>
+                        <li><strong>PIADv1-C benchmark</strong> &middot; <a href="https://huggingface.co/datasets/RayYoh/hammer" target="_blank" rel="noopener noreferrer">Hugging Face dataset</a> (also includes preprocessed PIADv1 and PIADv2)</li>
+                        <li><strong>Pretrained weights</strong> &middot; <a href="https://huggingface.co/RayYoh/Hammer" target="_blank" rel="noopener noreferrer">Hugging Face model</a></li>
+                        <li><strong>Code &amp; training scripts</strong> &middot; <a href="https://github.com/RayYoh/Hammer" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h2 class="title is-2">Acknowledgment</h2>
+    </div>
+</section>
 <section class="section" id="Acknowledgment">
     <div class="container is-max-desktop content">
-      <h2 class="title">Acknowledgment 👏</h2>
       <p>The research work described in this paper was conducted in the JC STEM Lab of Machine Learning and Computer Vision funded by The Hong Kong Jockey Club Charities Trust. This research received partially support from the Global STEM Professorship Scheme from the Hong Kong Special Administrative Region.</p>
     </div>
 </section>
 
-
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h2 class="title is-2">BibTeX</h2>
+    </div>
+</section>
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX 📝</h2>
-        <pre><code>@inproceedings{yao2026hammer,
+        <div class="bibtex-wrap">
+            <button type="button" class="bibtex-copy" id="bibtexCopyBtn" aria-label="Copy BibTeX to clipboard">
+                <span class="icon-text">
+                    <i class="fas fa-copy" aria-hidden="true"></i>
+                    <span style="margin-left: 0.35em;">Copy</span>
+                </span>
+            </button>
+            <pre><code id="bibtexCode">@inproceedings{yao2026hammer,
   title={HAMMER: Harnessing MLLMs via Cross-Modal Integration for Intention-Driven 3D Affordance Grounding},
   author={Yao, Lei and Chen, Yong and Su, Yuejiao and Wang, Yi and Liu, Moyun and Chau, Lap-Pui},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2026}
 }</code></pre>
+        </div>
     </div>
 </section>
 
@@ -338,6 +412,49 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // Navbar burger toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    var burgers = document.querySelectorAll('.navbar-burger');
+    burgers.forEach(function (burger) {
+      burger.addEventListener('click', function () {
+        var target = document.getElementById(burger.dataset.target);
+        burger.classList.toggle('is-active');
+        if (target) target.classList.toggle('is-active');
+      });
+    });
+
+    // Visualization tabs
+    var tabs = document.querySelectorAll('.vis-tabs li');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        var key = tab.dataset.vis;
+        document.querySelectorAll('.vis-panel').forEach(function (p) {
+          p.classList.toggle('is-active', p.id === 'vis-' + key);
+        });
+      });
+    });
+
+    // BibTeX copy
+    var btn = document.getElementById('bibtexCopyBtn');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var code = document.getElementById('bibtexCode').innerText;
+        navigator.clipboard.writeText(code).then(function () {
+          btn.classList.add('copied');
+          btn.innerHTML = '<span class="icon-text"><i class="fas fa-check" aria-hidden="true"></i><span style="margin-left: 0.35em;">Copied</span></span>';
+          setTimeout(function () {
+            btn.classList.remove('copied');
+            btn.innerHTML = '<span class="icon-text"><i class="fas fa-copy" aria-hidden="true"></i><span style="margin-left: 0.35em;">Copy</span></span>';
+          }, 1800);
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
