@@ -533,17 +533,17 @@ footer a:hover{color:var(--acc);border-color:var(--acc)}
         </div>
         <div class="vbar">
           <button class="ab" type="button" data-ab="pca_unseen">
-            <span class="on" data-i="0">affordance</span><span data-i="1">feature field</span>
+            <span data-i="0">affordance</span><span class="on" data-i="1">feature field</span>
           </button>
           <span class="vhint">per-point features, projected to three principal components</span>
           <button class="rst" data-rst="pca_unseen" type="button">reset</button>
         </div>
       </div>
-      <figcaption><b>What the points know.</b> Flipping to the feature field replaces the
-        affordance score with the learned per-point feature, reduced to three dimensions and
-        read as colour. The hues carry no meaning on their own — what matters is that parts of
-        an object settle into their own blocks of colour, which is the structure the affordance
-        head reads off.</figcaption>
+      <figcaption><b>What the points know.</b> These are the learned per-point features,
+        reduced to three dimensions and read as colour. The hues carry no meaning on their own —
+        what matters is that parts of an object settle into their own blocks of colour, which is
+        the structure the affordance head reads off. Flip to <i>affordance</i> to see what it
+        reads out of them.</figcaption>
     </figure>
 
     <figure class="reveal">
@@ -816,6 +816,8 @@ function wireAB(ab, g){
   ab.addEventListener('click', function(){
     set(spans[0].classList.contains('on') ? 1 : 0);
   });
+  /* whichever span carries .on in the markup is the side this figure opens on */
+  set(spans[1].classList.contains('on') ? 1 : 0);
 }
 
 /* space flips whichever toggle sits nearest the middle of the viewport */
